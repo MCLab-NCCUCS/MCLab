@@ -1,6 +1,7 @@
 // MCLab Projects Data
 // Add or modify projects in this array for easy maintenance
 
+// Add new projects in the front of this array
 const projects = [
     {
         title: "The MCLab side projects showcase website",
