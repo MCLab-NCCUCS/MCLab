@@ -12,20 +12,44 @@ This repository hosts our GitHub Pages site showcasing MCLab's mobile communicat
 
 ### Adding New Projects
 
-1. Edit `index.html`
-2. Find the `<div class="projects">` section
-3. Add a new project card:
+Projects are now managed in a separate `projects.js` file for easier maintenance.
 
-```html
-<div class="project-card">
-    <h3>Your Project Name</h3>
-    <div class="project-author">Your Name</div>
-    <p>Brief description of your project. What does it do? What technologies does it use?</p>
-    <a href="https://github.com/your-repo" class="project-link">View Project →</a>
-</div>
+1. Edit `projects.js`
+2. Find the `projects` array
+3. Add a new project object:
+
+```javascript
+{
+    title: "Your Project Name",
+    author: "Your Name",
+    description: "Brief description of your project. What does it do? What technologies does it use?",
+    link: "https://github.com/your-repo"
+}
 ```
 
-**Note**: The author field will automatically display with a user icon (👤) before the name.
+**Example:**
+
+```javascript
+const projects = [
+    {
+        title: "The MCLab side projects showcase website",
+        author: "Allen Chen",
+        description: "Create a website for our future side projects showcase. Using Github pages for hosting.",
+        link: "https://github.com/MCLab-NCCUCS/MCLab"
+    },
+    {
+        title: "Your New Project",
+        author: "Your Name",
+        description: "Your project description here.",
+        link: "https://github.com/your-repo"
+    }
+];
+```
+
+**Note**:
+- The author field will automatically display with a user icon (👤) before the name
+- Projects are rendered dynamically when the page loads
+- No need to edit HTML anymore!
 
 ### Updating Content
 
@@ -70,6 +94,7 @@ If not already enabled:
 ```
 MCLab/
 ├── index.html          # Main website file
+├── projects.js         # Projects data (edit this to add/update projects)
 ├── README.md          # This file
 └── .github/
     └── DESCRIPTION.md # Repository description
