@@ -32,16 +32,16 @@ Projects are now managed in a separate `projects.js` file for easier maintenance
 ```javascript
 const projects = [
     {
-        title: "The MCLab side projects showcase website",
-        author: "Allen Chen",
-        description: "Create a website for our future side projects showcase. Using Github pages for hosting.",
-        link: "https://github.com/MCLab-NCCUCS/MCLab"
-    },
-    {
         title: "Your New Project",
         author: "Your Name",
         description: "Your project description here.",
         link: "https://github.com/your-repo"
+    },
+    {
+        title: "The MCLab side projects showcase website",
+        author: "Allen Chen",
+        description: "Create a website for our future side projects showcase. Using Github pages for hosting.",
+        link: "https://github.com/MCLab-NCCUCS/MCLab"
     }
 ];
 ```
