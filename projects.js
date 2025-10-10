@@ -8,18 +8,6 @@ const projects = [
         author: "Allen Chen",
         description: "Create a website for our future side projects showcase. Using Github pages for hosting.",
         link: "https://github.com/MCLab-NCCUCS/MCLab"
-    },
-    {
-        title: "Project 2",
-        author: "Author Name",
-        description: "Add your project description here. What problem does it solve? What technologies does it use?",
-        link: "#"
-    },
-    {
-        title: "Project 3",
-        author: "Author Name",
-        description: "Add your project description here. What problem does it solve? What technologies does it use?",
-        link: "#"
     }
 ];
 
