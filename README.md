@@ -2,7 +2,7 @@
 
 A showcase of mobile communication side projects and experiments.
 
-🌐 **Website**: [https://YOUR_USERNAME.github.io/MCLab](https://YOUR_USERNAME.github.io/MCLab)
+🌐 **Website**: [https://mclab-nccucs.github.io/MCLab/](https://mclab-nccucs.github.io/MCLab/)
 
 ## About
 
