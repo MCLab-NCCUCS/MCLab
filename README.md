@@ -19,10 +19,13 @@ This repository hosts our GitHub Pages site showcasing MCLab's mobile communicat
 ```html
 <div class="project-card">
     <h3>Your Project Name</h3>
+    <div class="project-author">Your Name</div>
     <p>Brief description of your project. What does it do? What technologies does it use?</p>
     <a href="https://github.com/your-repo" class="project-link">View Project →</a>
 </div>
 ```
+
+**Note**: The author field will automatically display with a user icon (👤) before the name.
 
 ### Updating Content
 
