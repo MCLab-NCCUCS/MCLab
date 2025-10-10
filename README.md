@@ -16,7 +16,7 @@ Projects are now managed in a separate `projects.js` file for easier maintenance
 
 1. Edit `projects.js`
 2. Find the `projects` array
-3. Add a new project object:
+3. Add a new project object as the first element of the array:
 
 ```javascript
 {
