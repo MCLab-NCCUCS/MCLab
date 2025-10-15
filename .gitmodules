@@ -1,0 +1,6 @@
+[submodule "Simple-Workflow"]
+	path = Simple-Workflow
+	url = git@github.com:ylchen1805/Simple-Workflow.git
+[submodule ".github-workflow"]
+	path = .github-workflow
+	url = git@github.com:ylchen1805/Simple-Workflow.git
