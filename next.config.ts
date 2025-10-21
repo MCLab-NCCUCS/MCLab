@@ -1,12 +1,11 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  output: 'export',
-  basePath: process.env.NODE_ENV === 'production' ? '/MCLab' : '',
+  // Removed 'output: export' to support Server Actions for Admin CRUD
+  // This project should be deployed on Vercel or similar Node.js platform
   images: {
     unoptimized: true
   },
-  trailingSlash: true,
 };
 
 export default nextConfig;

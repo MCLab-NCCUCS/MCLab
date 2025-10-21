@@ -1,0 +1,34 @@
+[
+  {
+    "id": "5g-6g",
+    "title": "5G/6G 通訊技術",
+    "description": "研究下世代行動通訊技術的關鍵技術與應用，包含毫米波通訊、大規模MIMO、網路切片等創新技術。",
+    "icon": "📡",
+    "keywords": ["5G", "6G", "mmWave", "Massive MIMO", "Network Slicing"],
+    "publications": 5
+  },
+  {
+    "id": "wireless-networks",
+    "title": "無線網路",
+    "description": "探索無線網路的最佳化、資源管理、以及新興的無線通訊技術。",
+    "icon": "📶",
+    "keywords": ["Wireless", "Network Optimization", "Resource Management"],
+    "publications": 3
+  },
+  {
+    "id": "iot",
+    "title": "物聯網 (IoT)",
+    "description": "物聯網裝置通訊、低功耗網路、以及智慧城市應用研究。",
+    "icon": "🌐",
+    "keywords": ["IoT", "LPWAN", "Smart City", "Sensor Networks"],
+    "publications": 4
+  },
+  {
+    "id": "mec",
+    "title": "Mobile Edge Computing",
+    "description": "邊緣運算架構、任務卸載、以及低延遲服務設計。",
+    "icon": "⚡",
+    "keywords": ["MEC", "Edge Computing", "Task Offloading", "Latency"],
+    "publications": 2
+  }
+]

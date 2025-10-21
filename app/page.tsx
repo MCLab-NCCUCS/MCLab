@@ -1,63 +1,144 @@
+import Link from "next/link";
+import { Button } from "@/components/ui/button";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
+import { getProjects, getStats } from "@/lib/data";
+import { GraduationCap, Lightbulb, Users, BookOpen } from "lucide-react";
+
 export default function Home() {
+  const projects = getProjects();
+  const stats = getStats();
+
   return (
-    <div className="min-h-screen">
-      {/* Header */}
-      <header className="border-b border-border">
-        <div className="container mx-auto px-4 py-6">
-          <div className="text-center space-y-2">
-            <h1 className="text-5xl font-bold text-primary">MCLab</h1>
-            <p className="text-xl text-muted-foreground">Mobile Communication Lab</p>
-          </div>
+    <div className="container mx-auto px-4 py-8">
+      {/* Hero Section */}
+      <section className="text-center py-16 space-y-4">
+        <h1 className="text-5xl md:text-6xl font-bold text-primary">
+          MCLab
+        </h1>
+        <p className="text-xl md:text-2xl text-muted-foreground">
+          Mobile Communication Lab
+        </p>
+        <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+          國立政治大學資訊科學系
+        </p>
+        <div className="flex gap-4 justify-center pt-4">
+          <Link href="/projects">
+            <Button size="lg">View Projects</Button>
+          </Link>
+          <Link href="/team">
+            <Button size="lg" variant="outline">Meet Our Team</Button>
+          </Link>
         </div>
-      </header>
+      </section>
 
-      {/* Main Content */}
-      <main className="container mx-auto px-4 py-12">
-        {/* About Section */}
-        <section className="mb-16">
-          <h2 className="text-3xl font-bold text-primary mb-6 pb-2 border-b border-border">About</h2>
-          <div className="bg-card border-l-4 border-primary p-6 rounded-md">
-            <p className="text-foreground leading-relaxed">
-              Welcome to MCLab's project showcase. This is our space for experimenting with mobile
-              communication technologies, sharing side projects, and exploring innovative ideas in
-              the mobile computing space.
+      {/* Stats Section */}
+      <section className="grid grid-cols-2 md:grid-cols-4 gap-4 py-8">
+        <Card>
+          <CardHeader className="pb-2">
+            <CardTitle className="text-3xl font-bold text-primary">
+              {stats.activeMembers}
+            </CardTitle>
+            <CardDescription className="flex items-center gap-2">
+              <Users className="w-4 h-4" />
+              Active Members
+            </CardDescription>
+          </CardHeader>
+        </Card>
+        <Card>
+          <CardHeader className="pb-2">
+            <CardTitle className="text-3xl font-bold text-primary">
+              {stats.activeProjects}
+            </CardTitle>
+            <CardDescription className="flex items-center gap-2">
+              <Lightbulb className="w-4 h-4" />
+              Active Projects
+            </CardDescription>
+          </CardHeader>
+        </Card>
+        <Card>
+          <CardHeader className="pb-2">
+            <CardTitle className="text-3xl font-bold text-primary">
+              {stats.researchAreas}
+            </CardTitle>
+            <CardDescription className="flex items-center gap-2">
+              <GraduationCap className="w-4 h-4" />
+              Research Areas
+            </CardDescription>
+          </CardHeader>
+        </Card>
+        <Card>
+          <CardHeader className="pb-2">
+            <CardTitle className="text-3xl font-bold text-primary">
+              {stats.totalPublications}
+            </CardTitle>
+            <CardDescription className="flex items-center gap-2">
+              <BookOpen className="w-4 h-4" />
+              Publications
+            </CardDescription>
+          </CardHeader>
+        </Card>
+      </section>
+
+      {/* About Section */}
+      <section className="py-12 space-y-4">
+        <h2 className="text-3xl font-bold text-center">About MCLab</h2>
+        <Card>
+          <CardContent className="pt-6">
+            <p className="text-lg text-muted-foreground text-center max-w-3xl mx-auto">
+              MCLab (Mobile Communication Lab) 是政治大學資訊科學系的研究實驗室，
+              專注於行動通訊、無線網路、物聯網等前沿技術的研究與應用開發。
+              我們致力於透過創新研究和實務專案，培養學生在行動通訊領域的專業能力。
             </p>
-          </div>
-        </section>
+          </CardContent>
+        </Card>
+      </section>
 
-        {/* Projects Section */}
-        <section className="mb-16">
-          <h2 className="text-3xl font-bold text-primary mb-6 pb-2 border-b border-border">Projects</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {/* Project Card Example */}
-            <div className="bg-card border border-border rounded-lg p-6 hover:border-primary transition-colors">
-              <h3 className="text-xl font-semibold text-primary mb-2">
-                MCLab Website
-              </h3>
-              <div className="text-sm text-primary mb-4 flex items-center gap-2">
-                <span>👤</span>
-                <span>Allen Chen</span>
-              </div>
-              <p className="text-muted-foreground mb-4">
-                Create a website for our future side projects showcase. Using Github pages for hosting.
-              </p>
-              <a
-                href="https://github.com/MCLab-NCCUCS/MCLab"
-                className="text-primary hover:underline text-sm"
-              >
-                View Project →
-              </a>
-            </div>
-          </div>
-        </section>
-      </main>
-
-      {/* Footer */}
-      <footer className="border-t border-border mt-16">
-        <div className="container mx-auto px-4 py-8 text-center text-muted-foreground">
-          <p>&copy; 2025 MCLab. A collection of mobile communication experiments and side projects.</p>
+      {/* Recent Projects */}
+      <section className="py-12 space-y-6">
+        <div className="flex justify-between items-center">
+          <h2 className="text-3xl font-bold">Recent Projects</h2>
+          <Link href="/projects">
+            <Button variant="ghost">View All →</Button>
+          </Link>
         </div>
-      </footer>
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {projects.slice(0, 3).map((project) => (
+            <Card key={project.id} className="hover:shadow-lg transition-shadow">
+              <CardHeader>
+                <div className="flex justify-between items-start mb-2">
+                  <CardTitle className="text-xl">{project.title}</CardTitle>
+                  {project.status && (
+                    <Badge variant={project.status === "active" ? "default" : "secondary"}>
+                      {project.status}
+                    </Badge>
+                  )}
+                </div>
+                <CardDescription>by {project.author}</CardDescription>
+              </CardHeader>
+              <CardContent>
+                <p className="text-sm text-muted-foreground mb-4">
+                  {project.description}
+                </p>
+                {project.tags && (
+                  <div className="flex flex-wrap gap-2 mb-4">
+                    {project.tags.map((tag) => (
+                      <Badge key={tag} variant="outline" className="text-xs">
+                        {tag}
+                      </Badge>
+                    ))}
+                  </div>
+                )}
+                <a href={project.link} target="_blank" rel="noopener noreferrer">
+                  <Button variant="outline" size="sm" className="w-full">
+                    View Project →
+                  </Button>
+                </a>
+              </CardContent>
+            </Card>
+          ))}
+        </div>
+      </section>
     </div>
   );
 }
