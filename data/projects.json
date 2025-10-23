@@ -1,0 +1,12 @@
+[
+  {
+    "id": "mclab-website",
+    "title": "The MCLab side projects showcase website",
+    "author": "Allen Chen",
+    "description": "Create a website for our future side projects showcase. Using Github pages for hosting.",
+    "link": "https://github.com/MCLab-NCCUCS/MCLab",
+    "tags": ["Web Development", "GitHub Pages", "Next.js"],
+    "year": 2025,
+    "status": "active"
+  }
+]

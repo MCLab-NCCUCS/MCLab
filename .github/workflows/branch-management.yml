@@ -181,12 +181,12 @@ jobs:
           if [ "$PUSHED_BRANCH" == "main" ]; then
             echo "🔄 Syncing main changes to dev..."
             git fetch origin
-            git checkout dev
+            git checkout -B dev origin/dev
             git merge origin/main --no-ff -m "chore: sync from main"
             git push origin dev
-            
+
             echo "🔄 Syncing dev changes to test..."
-            git checkout test
+            git checkout -B test origin/test
             git merge origin/dev --no-ff -m "chore: sync from dev"
             git push origin test
           fi
@@ -195,7 +195,7 @@ jobs:
           if [ "$PUSHED_BRANCH" == "dev" ]; then
             echo "🔄 Syncing dev changes to test..."
             git fetch origin
-            git checkout test
+            git checkout -B test origin/test
             git merge origin/dev --no-ff -m "chore: sync from dev"
             git push origin test
           fi

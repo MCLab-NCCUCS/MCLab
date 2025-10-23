@@ -1,0 +1,26 @@
+[
+  {
+    "id": "prof-tsai",
+    "name": "蔡子傑",
+    "role": "advisor",
+    "email": "ttsai@cs.nccu.edu.tw",
+    "bio": "Professor at National Chengchi University, Department of Computer Science. Ph.D. in Computer Science from UCLA.",
+    "research": ["Computer Networks", "Mobile Computing", "IoT", "P2P Networks", "Smart Living"],
+    "links": {
+      "website": "http://www.cs.nccu.edu.tw/~ttsai/",
+      "scholar": "https://ah.nccu.edu.tw/scholar?id=6883"
+    }
+  },
+  {
+    "id": "allen-chen",
+    "name": "Allen Chen",
+    "role": "master",
+    "photo": "https://github.com/ghost.png",
+    "email": "allen@example.com",
+    "research": ["Web Development", "GitHub Pages"],
+    "links": {
+      "github": "https://github.com"
+    },
+    "joinedYear": 2024
+  }
+]
