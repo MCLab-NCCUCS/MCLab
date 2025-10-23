@@ -106,4 +106,10 @@ This is a personal project showcase. Individual projects may have their own lice
 
 ## Contributing
 
-This is a lab project site. If you're a lab member and want to add your project, please submit a pull request with your project card added to `index.html`.
+This is a lab project site. If you're a lab member and want to add your project:
+
+1. Read our [Contributing Guidelines](.github/CONTRIBUTING.md) to understand our GitHub Flow workflow
+2. Follow the [branch naming convention](.github/CONTRIBUTING.md#branch-naming-convention)
+3. Submit a pull request with your project added to `projects.js`
+
+For detailed workflow instructions, including how to sync your branch and create PRs, see [CONTRIBUTING.md](.github/CONTRIBUTING.md).
