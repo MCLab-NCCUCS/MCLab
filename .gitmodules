@@ -1,3 +1,0 @@
-[submodule ".github-workflow"]
-	path = .github-workflow
-	url = git@github.com:ylchen1805/Simple-Workflow.git
